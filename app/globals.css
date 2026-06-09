@@ -71,3 +71,19 @@ body {
   to   { transform: scaleX(1); }
 }
 .draw-line { animation: drawLine 1.2s 0.3s cubic-bezier(0.22, 1, 0.36, 1) both; transform-origin: left; }
+
+/* Marquee infinito (carrusel auto) */
+@keyframes marqueeLTR {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0%); }
+}
+.marquee-track {
+  animation: marqueeLTR 50s linear infinite;
+  width: max-content;
+}
+.marquee-wrapper:hover .marquee-track {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
+}
