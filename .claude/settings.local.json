@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p \"C:/Users/o0o_j/.claude/skills/ui-ux-pro-max\")",
+      "mcp__claude_ai_Firecrawl__firecrawl_scrape",
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --no-src-dir --import-alias \"@/*\" --yes)",
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --no-src-dir --import-alias \"@/*\" --yes --name jpenela)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(gh --version)",
+      "Bash(vercel --version)",
+      "PowerShell(gh --version)",
+      "PowerShell(vercel --version)",
+      "PowerShell(npm install -g vercel 2>&1)",
+      "PowerShell(tail -5)",
+      "PowerShell(npm install -g vercel)",
+      "PowerShell(winget install --id GitHub.cli -e --accept-package-agreements --accept-source-agreements)",
+      "Bash(git init *)",
+      "Bash(git add *)"
+    ]
+  }
+}
