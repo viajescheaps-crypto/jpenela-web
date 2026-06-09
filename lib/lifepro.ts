@@ -1,17 +1,29 @@
 /**
  * LifePro data fetcher
  *
- * Hace fetch de la home de LifePro cada hora (ISR) y extrae los meta
- * tags Open Graph para mostrar la oferta destacada actual en el banner.
+ * Hace fetch de la home de LifePro Nutrition cada hora (ISR) y extrae los
+ * meta tags Open Graph para mostrar la oferta destacada actual en el banner.
  *
  * Si LifePro cambia su web, este fetcher recoge automáticamente
  * el nuevo título, descripción e imagen en la próxima revalidación.
  *
- * El enlace siempre incluye el código de descuento JPENELA aplicado.
+ * Todos los enlaces incluyen el código de descuento JPENELA aplicado
+ * y parámetros UTM propios para que Juan pueda distinguir en sus
+ * analytics el tráfico que viene de su web del que viene de Instagram.
  */
 
-const DISCOUNT_CODE = 'JPENELA'
-const REFERRAL_URL = `https://www.lifepro.es/discount/${DISCOUNT_CODE}`
+const SOURCE_URL = 'https://www.lifepronutrition.com/es/'
+
+/**
+ * URL de referido con código JPENELA aplicado.
+ * UTMs personalizados para atribución desde la web (no Instagram).
+ */
+const REFERRAL_URL =
+  'https://www.lifepronutrition.com/es/' +
+  '?codigo=JPENELA' +
+  '&utm_source=jpenela_web' +
+  '&utm_medium=referral' +
+  '&utm_content=banner_home'
 
 export type LifeProOffer = {
   title: string
@@ -21,8 +33,9 @@ export type LifeProOffer = {
 }
 
 const FALLBACK: LifeProOffer = {
-  title: 'LifePro — Suplementación deportiva',
-  description: 'La marca que uso. Calidad real, sin humo. Usa mi código JPENELA y consigue descuento en toda la web.',
+  title: 'LifePro Nutrition — Suplementación deportiva',
+  description:
+    'La marca que uso. Calidad real, sin humo. Usa mi código JPENELA y consigue descuento en toda la web.',
   image: null,
   url: REFERRAL_URL,
 }
@@ -49,7 +62,7 @@ function extractOG(html: string, property: string): string | null {
  */
 export async function getLifeProOffer(): Promise<LifeProOffer> {
   try {
-    const res = await fetch('https://www.lifepro.es/', {
+    const res = await fetch(SOURCE_URL, {
       next: { revalidate: 3600 },
       headers: {
         'User-Agent':
