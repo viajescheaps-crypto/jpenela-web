@@ -49,7 +49,7 @@ export default function About() {
             <img
               src="/images/elementos.jpeg"
               alt="Juan Penela"
-              className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105"
+              className="w-full h-auto object-contain mix-blend-screen transition-transform duration-700 group-hover:scale-105"
             />
           </div>
         </div>

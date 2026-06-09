@@ -32,13 +32,13 @@ export default function Navbar() {
         scrolled ? 'bg-[#0A0908]/85 backdrop-blur-md border-b border-brand-accent/10' : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-16 md:h-20">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-20 md:h-24">
         {/* Logo */}
         <a href="#hero" className="flex items-center">
           <img
             src="/images/logo-nombre.jpeg"
             alt="Juan Penela"
-            className="h-10 md:h-12 w-auto object-contain"
+            className="h-14 md:h-20 w-auto object-contain mix-blend-screen"
           />
         </a>
 
