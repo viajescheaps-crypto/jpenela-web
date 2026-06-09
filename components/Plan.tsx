@@ -27,8 +27,9 @@ const features = [
 
 export default function Plan() {
   return (
-    <section id="plan" className="bg-[#0a0a0a] py-28 md:py-40 border-y border-white/5">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <section id="plan" className="relative bg-[#0a0807] py-28 md:py-40 border-y border-brand-accent/10 overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_70%_at_80%_20%,_rgba(201,168,116,0.05)_0%,_transparent_70%)] pointer-events-none" />
+      <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         {/* Encabezado */}
         <div className="grid md:grid-cols-12 gap-8 mb-20">
           <div className="md:col-span-5">
@@ -36,7 +37,7 @@ export default function Plan() {
             <h2 className="font-display text-4xl md:text-6xl text-white">
               Todo lo que<br />
               incluye trabajar<br />
-              <span className="text-white/40">conmigo.</span>
+              <span className="text-brand-accent">conmigo.</span>
             </h2>
           </div>
           <div className="md:col-span-6 md:col-start-7 flex items-end">
@@ -56,11 +57,11 @@ export default function Plan() {
               className="bg-[#0a0a0a] hover:bg-[#111] p-8 md:p-10 transition-colors duration-300 group"
             >
               <div className="flex items-start gap-5">
-                <span className="text-white/30 text-xs font-mono tracking-wider mt-1.5">
+                <span className="text-brand-accent/70 text-xs font-mono tracking-wider mt-1.5">
                   {String(i + 1).padStart(2, '0')}
                 </span>
                 <div className="flex-1">
-                  <h3 className="text-white font-medium text-lg md:text-xl mb-3 group-hover:translate-x-1 transition-transform duration-300">
+                  <h3 className="text-white font-medium text-lg md:text-xl mb-3 group-hover:translate-x-1 group-hover:text-brand-accent transition-all duration-300">
                     {f.title}
                   </h3>
                   <p className="text-white/50 text-[14px] leading-relaxed font-light">

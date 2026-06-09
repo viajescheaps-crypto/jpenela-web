@@ -28,14 +28,15 @@ const posts = [
 
 export default function InstagramFeed() {
   return (
-    <section className="bg-[#0a0a0a] py-28 md:py-40 border-y border-white/5">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <section className="relative bg-[#0a0807] py-28 md:py-40 border-y border-brand-accent/10 overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_30%_50%_at_85%_50%,_rgba(201,168,116,0.05)_0%,_transparent_70%)] pointer-events-none" />
+      <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid md:grid-cols-12 gap-8 mb-16">
           <div className="md:col-span-7">
             <p className="eyebrow mb-6">En redes 🔪</p>
             <h2 className="font-display text-4xl md:text-6xl text-white">
               Lo último en<br />
-              <span className="text-white/40">@jpenela</span>
+              <span className="text-brand-accent">@jpenela</span>
             </h2>
           </div>
           <div className="md:col-span-4 md:col-start-9 flex items-end">
@@ -62,12 +63,12 @@ export default function InstagramFeed() {
         <div className="mt-12 flex items-center justify-between border-t border-white/10 pt-8">
           <div className="flex items-center gap-6">
             <div>
-              <p className="font-display text-3xl text-white">7.2K</p>
+              <p className="font-display text-3xl text-brand-accent">7.2K</p>
               <p className="text-[11px] tracking-[0.2em] text-white/40 uppercase">Seguidores</p>
             </div>
-            <div className="h-12 w-px bg-white/10" />
+            <div className="h-12 w-px bg-brand-accent/20" />
             <div>
-              <p className="font-display text-3xl text-white">95</p>
+              <p className="font-display text-3xl text-brand-accent">95</p>
               <p className="text-[11px] tracking-[0.2em] text-white/40 uppercase">Posts</p>
             </div>
           </div>

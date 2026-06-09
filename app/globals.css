@@ -7,6 +7,13 @@
 :root {
   --font-display: 'Inter', sans-serif;
   --font-body: 'Inter', sans-serif;
+  /* Paleta premium cálida */
+  --bg-base: #0A0908;
+  --bg-elevated: #13110F;
+  --bg-deep: #050403;
+  --fg-primary: #FAFAF7;
+  --accent: #C9A874;
+  --accent-soft: #D4B88A;
 }
 
 * {
@@ -20,13 +27,18 @@ html {
 }
 
 body {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: var(--bg-base);
+  color: var(--fg-primary);
   font-family: var(--font-body);
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: 'ss01', 'cv11';
+  /* Sutil viñeta cálida en los bordes del viewport */
+  background-image:
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(201, 168, 116, 0.04) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 50% at 100% 100%, rgba(201, 168, 116, 0.03) 0%, transparent 60%);
+  background-attachment: fixed;
 }
 
 .font-display {
@@ -41,12 +53,37 @@ body {
   font-weight: 500;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(201, 168, 116, 0.7);
+}
+
+.eyebrow-muted {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(250, 250, 247, 0.4);
 }
 
 ::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: #000; }
-::-webkit-scrollbar-thumb { background: #2a2a2a; }
+::-webkit-scrollbar-track { background: var(--bg-base); }
+::-webkit-scrollbar-thumb { background: rgba(201, 168, 116, 0.25); }
+::-webkit-scrollbar-thumb:hover { background: rgba(201, 168, 116, 0.5); }
+
+/* Grano sutil para textura premium */
+.grain::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+}
+
+/* Sutil glow dorado para divisores */
+.divider-glow {
+  background: linear-gradient(90deg, transparent, rgba(201, 168, 116, 0.4), transparent);
+}
 
 /* Hero zoom */
 @keyframes heroZoom {
@@ -86,4 +123,20 @@ body {
 }
 @media (prefers-reduced-motion: reduce) {
   .marquee-track { animation: none; }
+}
+
+/* Shimmer dorado para CTAs principales */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.shimmer-gold {
+  background: linear-gradient(
+    90deg,
+    rgba(201, 168, 116, 0) 0%,
+    rgba(201, 168, 116, 0.3) 50%,
+    rgba(201, 168, 116, 0) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 4s ease-in-out infinite;
 }

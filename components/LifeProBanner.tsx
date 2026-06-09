@@ -4,65 +4,60 @@ export default async function LifeProBanner() {
   const offer = await getLifeProOffer()
 
   return (
-    <section className="bg-black border-y border-white/5 py-12 md:py-16">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <section className="bg-black border-y border-white/5">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 py-10 md:py-14">
         <a
           href={offer.url}
           target="_blank"
           rel="noopener noreferrer sponsored"
-          className="group relative block overflow-hidden"
+          className="group block"
         >
-          {/* Fondo con degradado naranja LifePro */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#F37021] via-[#FF8A3D] to-[#F37021]" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(255,255,255,0.15)_0%,_transparent_60%)]" />
+          <div className="grid md:grid-cols-12 gap-6 md:gap-10 items-center border border-white/10 hover:border-brand-accent/40 p-6 md:p-10 transition-all duration-500 hover:bg-[#0a0807]">
+            {/* Image */}
+            {offer.image ? (
+              <div className="md:col-span-3 aspect-square overflow-hidden bg-[#0a0a0a]">
+                <img
+                  src={offer.image}
+                  alt="LifePro"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+            ) : (
+              <div className="md:col-span-3 aspect-square flex items-center justify-center bg-[#0a0a0a] border border-white/10">
+                <span className="font-display text-5xl text-white">LIFE<br />PRO</span>
+              </div>
+            )}
 
-          {/* Contenido */}
-          <div className="relative grid md:grid-cols-12 gap-5 md:gap-8 items-center p-6 md:p-8">
-            {/* Imagen / mini logo */}
-            <div className="md:col-span-2">
-              {offer.image ? (
-                <div className="w-20 h-20 md:w-24 md:h-24 overflow-hidden bg-white/10 backdrop-blur-sm border border-white/20">
-                  <img
-                    src={offer.image}
-                    alt="LifePro"
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-              ) : (
-                <div className="w-20 h-20 md:w-24 md:h-24 flex items-center justify-center bg-white/10 backdrop-blur-sm border border-white/20">
-                  <span className="text-white font-black text-xl leading-none tracking-tight">
-                    LIFE<br />PRO
-                  </span>
-                </div>
-              )}
-            </div>
-
-            {/* Texto */}
-            <div className="md:col-span-7">
-              <div className="flex items-center gap-3 mb-2">
-                <span className="text-[10px] tracking-[0.25em] text-white/80 font-semibold uppercase">
+            {/* Content */}
+            <div className="md:col-span-9">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-[10px] tracking-[0.3em] text-brand-accent font-medium uppercase">
                   Patrocinado
                 </span>
-                <span className="text-[10px] text-white/40">·</span>
-                <span className="text-[10px] tracking-[0.25em] text-white/80 font-semibold uppercase">
-                  LifePro Nutrition
+                <span className="h-px w-8 bg-brand-accent/40" />
+                <span className="text-[10px] tracking-[0.2em] text-white/40 font-medium">
+                  LIFEPRO NUTRITION
                 </span>
               </div>
-              <h3 className="text-white text-lg md:text-2xl font-semibold leading-tight mb-1">
-                Mi suplementación de confianza.
-              </h3>
-              <p className="text-white/90 text-[13px] md:text-sm leading-relaxed font-light max-w-xl">
-                Usa mi código <span className="font-bold text-white">JPENELA</span> y consigue descuento en toda la tienda.
-              </p>
-            </div>
 
-            {/* CTA */}
-            <div className="md:col-span-3 flex md:justify-end">
-              <div className="inline-flex items-center gap-3 bg-black text-white px-5 py-3 group-hover:bg-white group-hover:text-[#F37021] transition-all duration-300">
-                <span className="text-[12px] font-semibold tracking-wide">IR A LA TIENDA</span>
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="group-hover:translate-x-1 transition-transform">
-                  <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square" />
-                </svg>
+              <h3 className="text-white text-xl md:text-2xl font-medium leading-tight mb-3 group-hover:text-brand-accent transition-colors duration-500">
+                {offer.title}
+              </h3>
+              <p className="text-white/55 text-[14px] md:text-[15px] leading-relaxed font-light mb-6 max-w-2xl">
+                {offer.description}
+              </p>
+
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                <div className="inline-flex items-center gap-3 border border-brand-accent/40 px-4 py-2 group-hover:border-brand-accent transition-colors">
+                  <span className="text-[10px] tracking-[0.2em] text-white/40">CÓDIGO</span>
+                  <span className="font-mono text-brand-accent font-semibold tracking-wider">JPENELA</span>
+                </div>
+                <span className="text-[13px] text-white/70 group-hover:text-white transition-colors flex items-center gap-2">
+                  Ir a la tienda
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="group-hover:translate-x-1 transition-transform">
+                    <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square" strokeLinejoin="miter" />
+                  </svg>
+                </span>
               </div>
             </div>
           </div>

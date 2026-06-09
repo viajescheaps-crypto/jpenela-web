@@ -8,14 +8,14 @@ const loop = [...photos, ...photos]
 
 export default function Transformations() {
   return (
-    <section id="transformaciones" className="bg-[#0a0a0a] py-28 md:py-40 border-y border-white/5">
+    <section id="transformaciones" className="bg-[#0a0807] py-28 md:py-40 border-y border-brand-accent/10">
       <div className="max-w-7xl mx-auto px-6 md:px-12 mb-16">
         <div className="grid md:grid-cols-12 gap-8">
           <div className="md:col-span-5">
             <p className="eyebrow mb-6">Resultados 🔪</p>
             <h2 className="font-display text-4xl md:text-6xl text-white">
               Personas reales,<br />
-              <span className="text-white/40">cambios reales.</span>
+              <span className="text-brand-accent">cambios reales.</span>
             </h2>
           </div>
           <div className="md:col-span-6 md:col-start-7 flex items-end">
@@ -31,8 +31,8 @@ export default function Transformations() {
       {/* Marquee infinito */}
       <div className="marquee-wrapper relative overflow-hidden">
         {/* Máscaras laterales para fade out */}
-        <div className="absolute left-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-r from-[#0a0a0a] to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-l from-[#0a0a0a] to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-r from-[#0a0807] to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-l from-[#0a0807] to-transparent z-10 pointer-events-none" />
 
         <div className="marquee-track flex gap-4 md:gap-6">
           {loop.map((p, i) => (

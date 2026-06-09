@@ -9,11 +9,14 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          black: '#000000',
-          white: '#FFFFFF',
-          surface: '#111111',
-          muted: 'rgba(255,255,255,0.55)',
-          border: 'rgba(255,255,255,0.12)',
+          black: '#0A0908',
+          white: '#FAFAF7',
+          surface: '#13110F',
+          muted: 'rgba(250,250,247,0.55)',
+          border: 'rgba(250,250,247,0.12)',
+          accent: '#C9A874',
+          'accent-soft': '#D4B88A',
+          'accent-dark': '#8B7444',
         },
       },
       fontFamily: {

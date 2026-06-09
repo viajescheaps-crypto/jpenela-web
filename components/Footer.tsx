@@ -2,12 +2,13 @@ export default function Footer() {
   return (
     <>
       {/* CTA Final */}
-      <section className="bg-[#0a0a0a] py-28 md:py-40 border-t border-white/5">
-        <div className="max-w-4xl mx-auto px-6 md:px-12 text-center">
+      <section className="relative bg-[#0a0807] py-28 md:py-40 border-t border-brand-accent/10 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_60%_at_50%_50%,_rgba(201,168,116,0.07)_0%,_transparent_70%)] pointer-events-none" />
+        <div className="relative max-w-4xl mx-auto px-6 md:px-12 text-center">
           <p className="eyebrow mb-6">El siguiente paso</p>
           <h2 className="font-display text-4xl md:text-7xl text-white mb-8 leading-[0.95]">
             Empieza hoy<br />
-            <span className="text-white/40">tu proceso.</span>
+            <span className="text-brand-accent">tu proceso.</span>
           </h2>
           <p className="text-white/55 text-[15px] md:text-base leading-relaxed mb-12 max-w-xl mx-auto font-light">
             Escríbeme por WhatsApp y hablamos de tu objetivo. Sin compromisos,
@@ -28,7 +29,7 @@ export default function Footer() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-black border-t border-white/10 py-12 px-6 md:px-12">
+      <footer className="bg-[#050403] border-t border-brand-accent/10 py-12 px-6 md:px-12">
         <div className="max-w-7xl mx-auto grid md:grid-cols-3 items-center gap-8">
           <div className="flex items-center gap-3 justify-center md:justify-start">
             <img src="/images/logo.jpeg" alt="Juan Penela" className="h-10 w-auto object-contain" />

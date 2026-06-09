@@ -1,7 +1,9 @@
 export default function About() {
   return (
-    <section id="sobre-mi" className="bg-black py-28 md:py-40">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-12 gap-12 md:gap-16 items-center">
+    <section id="sobre-mi" className="relative bg-[#0A0908] py-28 md:py-40 overflow-hidden">
+      {/* Glow dorado sutil a la izquierda */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_40%_60%_at_15%_50%,_rgba(201,168,116,0.06)_0%,_transparent_70%)] pointer-events-none" />
+      <div className="relative max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-12 gap-12 md:gap-16 items-center">
         {/* Foto */}
         <div className="md:col-span-5 relative">
           <div className="aspect-[4/5] overflow-hidden bg-[#111]">
@@ -29,7 +31,7 @@ export default function About() {
 
           <h2 className="font-display text-4xl md:text-6xl text-white mb-10">
             Un método pensado<br />
-            <span className="text-white/40">para personas reales.</span>
+            <span className="text-brand-accent">para personas reales.</span>
           </h2>
 
           <div className="space-y-5 text-white/65 leading-relaxed text-[15px] md:text-base font-light max-w-2xl">
@@ -49,9 +51,9 @@ export default function About() {
             </p>
           </div>
 
-          <div className="mt-12 grid grid-cols-2 gap-px bg-white/10 border border-white/10 max-w-md">
+          <div className="mt-12 grid grid-cols-2 gap-px bg-brand-accent/15 border border-brand-accent/15 max-w-md">
             {['Nutrición', 'Entrenamiento', 'Suplementación', 'Seguimiento'].map(tag => (
-              <div key={tag} className="bg-black px-5 py-4 text-white/70 text-[13px] tracking-wide">
+              <div key={tag} className="bg-[#0A0908] px-5 py-4 text-white/70 text-[13px] tracking-wide hover:text-brand-accent transition-colors">
                 {tag}
               </div>
             ))}
