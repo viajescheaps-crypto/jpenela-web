@@ -40,7 +40,7 @@ export default function Footer() {
       <footer className="bg-[#050403] border-t border-brand-accent/10 py-12 px-6 md:px-12">
         <div className="max-w-7xl mx-auto grid md:grid-cols-3 items-center gap-8">
           <div className="flex items-center justify-center md:justify-start">
-            <img src="/images/logo-nombre.jpeg" alt="Juan Penela" className="h-16 w-auto object-contain" />
+            <img src="/images/logo-nombre.png" alt="Juan Penela" className="h-16 w-auto object-contain" />
           </div>
 
           <p className="text-white/30 text-xs tracking-wide text-center font-light">

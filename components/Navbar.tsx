@@ -36,7 +36,7 @@ export default function Navbar() {
         {/* Logo */}
         <a href="#hero" className="flex items-center">
           <img
-            src="/images/logo-nombre.jpeg"
+            src="/images/logo-nombre.png"
             alt="Juan Penela"
             className="h-14 md:h-20 w-auto object-contain"
           />
