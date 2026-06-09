@@ -1,7 +1,12 @@
+'use client'
+
+import { useTranslation } from '@/lib/LanguageProvider'
+
 export default function About() {
+  const { t } = useTranslation()
+
   return (
     <section id="sobre-mi" className="relative bg-[#0A0908] py-28 md:py-40 overflow-hidden">
-      {/* Glow dorado sutil a la izquierda */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_40%_60%_at_15%_50%,_rgba(201,168,116,0.06)_0%,_transparent_70%)] pointer-events-none" />
       <div className="relative max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-12 gap-12 md:gap-16 items-center">
         {/* Foto */}
@@ -27,32 +32,21 @@ export default function About() {
 
         {/* Texto */}
         <div className="md:col-span-7 md:pl-8">
-          <p className="eyebrow mb-6">Sobre mí</p>
+          <p className="eyebrow mb-6">{t.about.eyebrow}</p>
 
           <h2 className="font-display text-4xl md:text-6xl text-white mb-10">
-            Un método pensado<br />
-            <span className="text-brand-accent">para personas reales.</span>
+            {t.about.titleLine1}<br />
+            <span className="text-brand-accent">{t.about.titleLine2}</span>
           </h2>
 
           <div className="space-y-5 text-white/65 leading-relaxed text-[15px] md:text-base font-light max-w-2xl">
-            <p>
-              Soy Juan Penela. Llevo años acompañando a personas en sus procesos de
-              transformación física, trabajando de forma directa, sin atajos y sin
-              programas estandarizados.
-            </p>
-            <p>
-              Cada plan que entrego está diseñado desde cero a partir de tus hábitos,
-              tus gustos, tu horario y tu disponibilidad. No hay dos clientes con el
-              mismo plan, porque no hay dos personas iguales.
-            </p>
-            <p>
-              El seguimiento es continuo y la comunicación es humana. Sin chatbots, sin
-              respuestas genéricas — me escribes y te respondo yo, directamente.
-            </p>
+            <p>{t.about.p1}</p>
+            <p>{t.about.p2}</p>
+            <p>{t.about.p3}</p>
           </div>
 
           <div className="mt-12 grid grid-cols-2 gap-px bg-brand-accent/15 border border-brand-accent/15 max-w-md">
-            {['Nutrición', 'Entrenamiento', 'Suplementación', 'Seguimiento'].map(tag => (
+            {t.about.tags.map(tag => (
               <div key={tag} className="bg-[#0A0908] px-5 py-4 text-white/70 text-[13px] tracking-wide hover:text-brand-accent transition-colors">
                 {tag}
               </div>

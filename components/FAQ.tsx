@@ -1,33 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-
-const faqs = [
-  {
-    q: '¿En qué consiste exactamente el programa?',
-    a: 'Recibirás un plan de entrenamiento semanal y un plan nutricional, ambos diseñados específicamente para ti. Incluye seguimiento continuo vía WhatsApp, corrección de ejercicios por vídeo y actualizaciones del plan según tu progreso.',
-  },
-  {
-    q: '¿Necesito ir al gimnasio para entrenar?',
-    a: 'No es imprescindible. El plan se adapta a tus circunstancias. Si tienes acceso a gimnasio, lo aprovechamos al máximo. Si entrenas en casa, diseñamos las rutinas con ese material. Cuéntame tu situación y lo ajustamos.',
-  },
-  {
-    q: '¿Cómo es la comunicación durante el proceso?',
-    a: 'Toda la comunicación se gestiona a través de WhatsApp. Me escribes tú directamente y te respondo yo, sin chatbots ni intermediarios. Respuesta en menos de 24 horas.',
-  },
-  {
-    q: '¿Qué pasa si no veo resultados?',
-    a: 'El plan se revisa y se actualiza en función de tu progreso real. Si algo no está funcionando, lo identificamos juntos y lo ajustamos. El seguimiento continuo existe precisamente para que eso no ocurra.',
-  },
-  {
-    q: '¿Cuánto tardo en recibir mi plan?',
-    a: 'Una vez que rellenas el cuestionario inicial con tus datos, tendrás tu plan completamente personalizado en pocos días. A partir de ese momento, el seguimiento es inmediato.',
-  },
-  {
-    q: '¿Cómo solicito más información?',
-    a: 'Lo más sencillo es escribirme directamente por WhatsApp. Te explico el programa, resuelvo cualquier duda y vemos juntos si encaja con tu objetivo, sin compromiso.',
-  },
-]
+import { useTranslation } from '@/lib/LanguageProvider'
 
 function FAQItem({ q, a, idx }: { q: string; a: string; idx: number }) {
   const [open, setOpen] = useState(false)
@@ -63,20 +37,22 @@ function FAQItem({ q, a, idx }: { q: string; a: string; idx: number }) {
 }
 
 export default function FAQ() {
+  const { t } = useTranslation()
+
   return (
     <section id="faq" className="relative bg-[#0A0908] py-28 md:py-40 overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_40%_50%_at_50%_0%,_rgba(201,168,116,0.04)_0%,_transparent_70%)] pointer-events-none" />
       <div className="relative max-w-4xl mx-auto px-6 md:px-12">
         <div className="mb-16">
-          <p className="eyebrow mb-6">Preguntas frecuentes</p>
+          <p className="eyebrow mb-6">{t.faq.eyebrow}</p>
           <h2 className="font-display text-4xl md:text-6xl text-white">
-            Las dudas más<br />
-            <span className="text-brand-accent">habituales.</span>
+            {t.faq.titleLine1}<br />
+            <span className="text-brand-accent">{t.faq.titleLine2}</span>
           </h2>
         </div>
 
         <div>
-          {faqs.map((f, i) => (
+          {t.faq.items.map((f, i) => (
             <FAQItem key={i} q={f.q} a={f.a} idx={i} />
           ))}
         </div>

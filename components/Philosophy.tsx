@@ -1,45 +1,33 @@
-const pillars = [
-  {
-    quote: 'Tu cuerpo no cambiará hasta que aprendas a construir una mente fuerte.',
-    pillar: 'Mentalidad',
-  },
-  {
-    quote: 'Nadie compra un buen físico. Lo conquistas con amor propio, dedicación y disciplina.',
-    pillar: 'Disciplina',
-  },
-  {
-    quote: 'El peso impresiona unos segundos. La técnica construye resultados durante años.',
-    pillar: 'Constancia',
-  },
-]
+'use client'
+
+import { useTranslation } from '@/lib/LanguageProvider'
 
 export default function Philosophy() {
+  const { t } = useTranslation()
+
   return (
     <section className="bg-[#0A0908] py-28 md:py-40 relative overflow-hidden">
-      {/* Glow dorado central */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_70%_at_50%_50%,_rgba(201,168,116,0.06)_0%,_transparent_70%)]" />
 
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid md:grid-cols-12 gap-8 mb-20">
           <div className="md:col-span-5">
-            <p className="eyebrow mb-6">Filosofía 🔪</p>
+            <p className="eyebrow mb-6">{t.philosophy.eyebrow} 🔪</p>
             <h2 className="font-display text-4xl md:text-6xl text-white">
-              Lo que entreno<br />
-              antes que el cuerpo:<br />
-              <span className="text-brand-accent">la cabeza.</span>
+              {t.philosophy.titleLine1}<br />
+              {t.philosophy.titleLine2}<br />
+              <span className="text-brand-accent">{t.philosophy.titleLine3}</span>
             </h2>
           </div>
           <div className="md:col-span-6 md:col-start-7 flex items-end">
             <p className="text-white/55 text-[15px] md:text-base leading-relaxed font-light">
-              No vendo dietas mágicas ni rutinas milagrosas. Trabajo con personas
-              que entienden que el cambio físico empieza por la cabeza y se
-              sostiene con disciplina diaria.
+              {t.philosophy.intro}
             </p>
           </div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 md:gap-12">
-          {pillars.map((p, i) => (
+          {t.philosophy.pillars.map((p, i) => (
             <div key={i} className="group">
               <div className="flex items-center gap-3 mb-6">
                 <span className="font-mono text-xs text-brand-accent/60 tracking-wider">
