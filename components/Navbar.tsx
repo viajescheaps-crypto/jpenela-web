@@ -1,13 +1,12 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import Image from 'next/image'
 
 const links = [
-  { label: 'INICIO', href: '#hero' },
-  { label: 'SOBRE MÍ', href: '#sobre-mi' },
-  { label: 'EL PLAN', href: '#plan' },
-  { label: 'TRANSFORMACIONES', href: '#transformaciones' },
+  { label: 'Inicio', href: '#hero' },
+  { label: 'Sobre mí', href: '#sobre-mi' },
+  { label: 'Programa', href: '#plan' },
+  { label: 'Resultados', href: '#transformaciones' },
   { label: 'FAQ', href: '#faq' },
 ]
 
@@ -24,28 +23,29 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-black/90 backdrop-blur-sm border-b border-white/10' : 'bg-transparent'
+        scrolled ? 'bg-black/85 backdrop-blur-md border-b border-white/10' : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16 md:h-20">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
-        <a href="#hero" className="flex items-center">
-          <Image
+        <a href="#hero" className="flex items-center gap-3">
+          <img
             src="/images/logo.png"
             alt="Juan Penela"
-            width={52}
-            height={52}
-            className="object-contain"
+            className="h-9 w-auto object-contain"
           />
+          <span className="hidden sm:inline text-white text-[13px] tracking-[0.15em] font-medium">
+            JUAN PENELA
+          </span>
         </a>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-9">
           {links.map(link => (
             <a
               key={link.href}
               href={link.href}
-              className="text-xs tracking-[0.15em] text-white/70 hover:text-white transition-colors font-medium"
+              className="text-[13px] text-white/65 hover:text-white transition-colors font-medium"
             >
               {link.label}
             </a>
@@ -54,10 +54,10 @@ export default function Navbar() {
 
         {/* CTA desktop */}
         <a
-          href="https://wa.me/34601172353?text=Hola%20Juan%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20plan%20personalizado"
+          href="https://wa.me/34601172353?text=Hola%20Juan%2C%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n%20sobre%20tu%20programa"
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden md:inline-flex items-center gap-2 bg-white text-black text-xs font-semibold tracking-[0.15em] px-5 py-2.5 hover:bg-white/90 transition-colors"
+          className="hidden md:inline-flex items-center gap-2 bg-white text-black text-[12px] font-semibold tracking-wide px-5 py-2.5 hover:bg-white/90 transition-colors"
         >
           CONTACTAR
         </a>
@@ -68,30 +68,30 @@ export default function Navbar() {
           className="md:hidden flex flex-col gap-1.5 p-2"
           aria-label="Menú"
         >
-          <span className={`block w-6 h-0.5 bg-white transition-all duration-300 ${open ? 'rotate-45 translate-y-2' : ''}`} />
-          <span className={`block w-6 h-0.5 bg-white transition-all duration-300 ${open ? 'opacity-0' : ''}`} />
-          <span className={`block w-6 h-0.5 bg-white transition-all duration-300 ${open ? '-rotate-45 -translate-y-2' : ''}`} />
+          <span className={`block w-6 h-px bg-white transition-all duration-300 ${open ? 'rotate-45 translate-y-1.5' : ''}`} />
+          <span className={`block w-6 h-px bg-white transition-all duration-300 ${open ? 'opacity-0' : ''}`} />
+          <span className={`block w-6 h-px bg-white transition-all duration-300 ${open ? '-rotate-45 -translate-y-1.5' : ''}`} />
         </button>
       </div>
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-black border-t border-white/10 px-6 py-6 flex flex-col gap-5">
+        <div className="md:hidden bg-black border-t border-white/10 px-6 py-8 flex flex-col gap-5">
           {links.map(link => (
             <a
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="text-sm tracking-[0.15em] text-white/80 hover:text-white"
+              className="text-sm text-white/80 hover:text-white font-medium"
             >
               {link.label}
             </a>
           ))}
           <a
-            href="https://wa.me/34601172353?text=Hola%20Juan%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20plan%20personalizado"
+            href="https://wa.me/34601172353?text=Hola%20Juan%2C%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n%20sobre%20tu%20programa"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-2 inline-flex justify-center bg-white text-black text-xs font-semibold tracking-[0.15em] px-5 py-3"
+            className="mt-2 inline-flex justify-center bg-white text-black text-[12px] font-semibold tracking-wide px-5 py-3"
           >
             CONTACTAR POR WHATSAPP
           </a>

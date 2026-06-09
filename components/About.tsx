@@ -1,54 +1,52 @@
 export default function About() {
   return (
-    <section id="sobre-mi" className="bg-[#111111] py-24 md:py-32">
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+    <section id="sobre-mi" className="bg-black py-28 md:py-40">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-12 gap-12 md:gap-16 items-center">
         {/* Foto */}
-        <div className="relative">
-          <div className="aspect-[3/4] overflow-hidden">
+        <div className="md:col-span-5 relative">
+          <div className="aspect-[4/5] overflow-hidden bg-[#111]">
             <img
               src="/images/juan-hero.jpg"
-              alt="Juan Penela entrenador personal"
-              className="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-700"
+              alt="Juan Penela"
+              className="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-1000"
             />
           </div>
-          {/* Logo superpuesto */}
-          <div className="absolute -bottom-6 -right-6 bg-black p-4">
-            <img src="/images/logo.png" alt="JP" className="w-16 h-16 object-contain" />
+          <div className="absolute -bottom-5 -right-5 bg-black p-4 border border-white/10">
+            <img src="/images/logo.png" alt="JP" className="w-14 h-14 object-contain" />
           </div>
         </div>
 
         {/* Texto */}
-        <div>
-          <p className="text-xs tracking-[0.3em] text-white/40 mb-4">SOBRE MÍ</p>
-          <h2
-            className="text-5xl md:text-7xl leading-none mb-8 uppercase"
-            style={{ fontFamily: 'Bebas Neue, Barlow Condensed, sans-serif' }}
-          >
-            MI MÉTODO<br />DA RESULTADOS
+        <div className="md:col-span-7 md:pl-8">
+          <p className="eyebrow mb-6">Sobre mí</p>
+
+          <h2 className="font-display text-4xl md:text-6xl text-white mb-10">
+            Un método pensado<br />
+            <span className="text-white/40">para personas reales.</span>
           </h2>
-          <div className="space-y-4 text-white/70 leading-relaxed">
+
+          <div className="space-y-5 text-white/65 leading-relaxed text-[15px] md:text-base font-light max-w-2xl">
             <p>
-              Soy Juan Penela, entrenador personal online especializado en transformaciones reales.
-              Trabajo contigo de forma directa y personalizada para que alcances tu objetivo,
-              sin excusas y sin métodos genéricos.
+              Soy Juan Penela. Llevo años acompañando a personas en sus procesos de
+              transformación física, trabajando de forma directa, sin atajos y sin
+              programas estandarizados.
             </p>
             <p>
-              Cada plan que entrego está diseñado desde cero para ti: adaptado a tus gustos,
-              tu horario, tus días de entrenamiento y tus objetivos concretos.
-              No hay copiar y pegar.
+              Cada plan que entrego está diseñado desde cero a partir de tus hábitos,
+              tus gustos, tu horario y tu disponibilidad. No hay dos clientes con el
+              mismo plan, porque no hay dos personas iguales.
             </p>
             <p>
-              El seguimiento lo hacemos vía WhatsApp — de lunes a viernes, 8:00 a 19:00.
-              Puedes enviarme vídeos para corrección de técnica, preguntarme cualquier duda
-              y recibir actualizaciones del plan según tu progreso real.
+              El seguimiento es continuo y la comunicación es humana. Sin chatbots, sin
+              respuestas genéricas — me escribes y te respondo yo, directamente.
             </p>
           </div>
 
-          <div className="mt-10 flex flex-wrap gap-4">
-            {['Nutrición personalizada', 'Entrenamiento adaptado', 'Seguimiento real', 'Corrección por vídeo'].map(tag => (
-              <span key={tag} className="border border-white/20 text-white/60 text-xs tracking-[0.15em] px-4 py-2">
+          <div className="mt-12 grid grid-cols-2 gap-px bg-white/10 border border-white/10 max-w-md">
+            {['Nutrición', 'Entrenamiento', 'Suplementación', 'Seguimiento'].map(tag => (
+              <div key={tag} className="bg-black px-5 py-4 text-white/70 text-[13px] tracking-wide">
                 {tag}
-              </span>
+              </div>
             ))}
           </div>
         </div>

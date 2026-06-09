@@ -4,72 +4,79 @@ import { useState } from 'react'
 
 const faqs = [
   {
-    q: '¿En qué consiste el plan exactamente?',
-    a: 'Recibirás un plan de entrenamiento semanal y un plan nutricional, ambos personalizados para ti. Incluye seguimiento continuo vía WhatsApp, corrección de ejercicios por vídeo y actualizaciones según tu progreso.',
+    q: '¿En qué consiste exactamente el programa?',
+    a: 'Recibirás un plan de entrenamiento semanal y un plan nutricional, ambos diseñados específicamente para ti. Incluye seguimiento continuo vía WhatsApp, corrección de ejercicios por vídeo y actualizaciones del plan según tu progreso.',
   },
   {
-    q: '¿Necesito ir al gimnasio?',
-    a: 'El plan se adapta a tus circunstancias. Si tienes gimnasio, lo aprovechamos al máximo. Si entrenas en casa, diseñamos las rutinas para ello. Cuéntame tu situación y lo ajustamos.',
+    q: '¿Necesito ir al gimnasio para entrenar?',
+    a: 'No es imprescindible. El plan se adapta a tus circunstancias. Si tienes acceso a gimnasio, lo aprovechamos al máximo. Si entrenas en casa, diseñamos las rutinas con ese material. Cuéntame tu situación y lo ajustamos.',
   },
   {
-    q: '¿Cómo me contactas y cómo te contacto yo?',
-    a: 'Todo se gestiona por WhatsApp. Puedes escribirme de lunes a viernes de 8:00 a 19:00. Te respondo en el menor tiempo posible y hacemos el seguimiento por ese mismo canal.',
+    q: '¿Cómo es la comunicación durante el proceso?',
+    a: 'Toda la comunicación se gestiona a través de WhatsApp, de lunes a viernes en horario de 8:00 a 19:00. Me escribes tú directamente y te respondo yo, sin chatbots ni intermediarios.',
   },
   {
     q: '¿Qué pasa si no veo resultados?',
-    a: 'El plan se actualiza según tu progreso real. Si algo no está funcionando, lo identificamos juntos y ajustamos. El seguimiento continuo es precisamente para que eso no pase.',
+    a: 'El plan se revisa y se actualiza en función de tu progreso real. Si algo no está funcionando, lo identificamos juntos y lo ajustamos. El seguimiento continuo existe precisamente para que eso no ocurra.',
   },
   {
-    q: '¿Cuándo recibo el plan tras el pago?',
-    a: 'Una vez que me contactas y rellenas el cuestionario inicial, tendrás tu plan personalizado en pocos días. A partir de ahí, el seguimiento es inmediato.',
+    q: '¿Cuánto tardo en recibir mi plan?',
+    a: 'Una vez que rellenas el cuestionario inicial con tus datos, tendrás tu plan completamente personalizado en pocos días. A partir de ese momento, el seguimiento es inmediato.',
   },
   {
-    q: '¿El precio incluye los 3 meses completos?',
-    a: 'Sí. Los 180€ son un único pago que cubre los 3 meses completos de plan + seguimiento + actualizaciones. Sin cuotas mensuales ni sorpresas.',
+    q: '¿Cómo solicito más información?',
+    a: 'Lo más sencillo es escribirme directamente por WhatsApp. Te explico el programa, resuelvo cualquier duda y vemos juntos si encaja con tu objetivo, sin compromiso.',
   },
 ]
 
-function FAQItem({ q, a }: { q: string; a: string }) {
+function FAQItem({ q, a, idx }: { q: string; a: string; idx: number }) {
   const [open, setOpen] = useState(false)
   return (
     <div className="border-b border-white/10">
       <button
         onClick={() => setOpen(!open)}
-        className="w-full flex items-center justify-between py-6 text-left gap-4 group"
+        className="w-full flex items-center justify-between py-7 text-left gap-6 group"
       >
-        <span className="text-sm md:text-base text-white/80 group-hover:text-white transition-colors tracking-wide">
-          {q}
-        </span>
-        <span className={`flex-shrink-0 w-6 h-6 flex items-center justify-center border border-white/20 transition-transform duration-300 ${open ? 'rotate-45' : ''}`}>
+        <div className="flex items-center gap-6 flex-1">
+          <span className="text-white/30 text-xs font-mono tracking-wider">
+            {String(idx + 1).padStart(2, '0')}
+          </span>
+          <span className="text-[15px] md:text-base text-white/85 group-hover:text-white transition-colors font-medium">
+            {q}
+          </span>
+        </div>
+        <span className={`flex-shrink-0 w-7 h-7 flex items-center justify-center border border-white/20 group-hover:border-white/50 transition-all duration-300 ${open ? 'rotate-45 bg-white/10' : ''}`}>
           <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
-            <path d="M5 1v8M1 5h8" stroke="white" strokeWidth="1.2" strokeLinecap="square"/>
+            <path d="M5 1v8M1 5h8" stroke="currentColor" strokeWidth="1.2" className="text-white" />
           </svg>
         </span>
       </button>
-      {open && (
-        <p className="pb-6 text-sm text-white/50 leading-relaxed pr-10">{a}</p>
-      )}
+      <div className={`grid transition-all duration-500 ease-in-out ${open ? 'grid-rows-[1fr] opacity-100 pb-7' : 'grid-rows-[0fr] opacity-0'}`}>
+        <div className="overflow-hidden">
+          <p className="text-[14px] md:text-[15px] text-white/55 leading-relaxed font-light pl-12 pr-10">
+            {a}
+          </p>
+        </div>
+      </div>
     </div>
   )
 }
 
 export default function FAQ() {
   return (
-    <section id="faq" className="bg-[#111111] py-24 md:py-32">
-      <div className="max-w-3xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <p className="text-xs tracking-[0.3em] text-white/40 mb-4">PREGUNTAS FRECUENTES</p>
-          <h2
-            className="text-5xl md:text-7xl leading-none uppercase"
-            style={{ fontFamily: 'Bebas Neue, Barlow Condensed, sans-serif' }}
-          >
-            TIENES DUDAS
+    <section id="faq" className="bg-black py-28 md:py-40">
+      <div className="max-w-4xl mx-auto px-6 md:px-12">
+        <div className="mb-16">
+          <p className="eyebrow mb-6">Preguntas frecuentes</p>
+          <h2 className="font-display text-4xl md:text-6xl text-white">
+            Las dudas más<br />
+            <span className="text-white/40">habituales.</span>
           </h2>
         </div>
 
         <div>
           {faqs.map((f, i) => (
-            <FAQItem key={i} q={f.q} a={f.a} />
+            <FAQItem key={i} q={f.q} a={f.a} idx={i} />
           ))}
         </div>
       </div>

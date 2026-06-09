@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap');
 
 :root {
-  --font-bebas: 'Bebas Neue', sans-serif;
-  --font-inter: 'Inter', sans-serif;
+  --font-display: 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
 }
 
 * {
@@ -22,32 +22,52 @@ html {
 body {
   background-color: #000000;
   color: #ffffff;
-  font-family: var(--font-inter);
+  font-family: var(--font-body);
+  font-weight: 300;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'ss01', 'cv11';
 }
 
-/* Scrollbar */
+.font-display {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 0.95;
+}
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+}
+
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: #000; }
-::-webkit-scrollbar-thumb { background: #333; }
+::-webkit-scrollbar-thumb { background: #2a2a2a; }
 
-/* Animación zoom hero */
+/* Hero zoom */
 @keyframes heroZoom {
   from { transform: scale(1); }
-  to   { transform: scale(1.06); }
+  to   { transform: scale(1.08); }
 }
-
-.hero-zoom {
-  animation: heroZoom 8s ease-out forwards;
-}
+.hero-zoom { animation: heroZoom 12s ease-out forwards; }
 
 /* Fade up */
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(24px); }
+  from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+.fade-up { animation: fadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+.fade-up-delay-1 { animation: fadeUp 0.9s 0.15s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.fade-up-delay-2 { animation: fadeUp 0.9s 0.3s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.fade-up-delay-3 { animation: fadeUp 0.9s 0.5s cubic-bezier(0.22, 1, 0.36, 1) both; }
 
-.fade-up { animation: fadeUp 0.7s ease-out forwards; }
-.fade-up-delay-1 { animation: fadeUp 0.7s 0.2s ease-out both; }
-.fade-up-delay-2 { animation: fadeUp 0.7s 0.4s ease-out both; }
-.fade-up-delay-3 { animation: fadeUp 0.7s 0.6s ease-out both; }
+/* Divider line animation */
+@keyframes drawLine {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+.draw-line { animation: drawLine 1.2s 0.3s cubic-bezier(0.22, 1, 0.36, 1) both; transform-origin: left; }
