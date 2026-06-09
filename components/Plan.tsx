@@ -13,7 +13,7 @@ const features = [
   },
   {
     title: 'Contacto directo por WhatsApp',
-    desc: 'De lunes a viernes, de 8:00 a 19:00. Me escribes tú y te respondo yo — sin intermediarios.',
+    desc: 'Me escribes tú y te respondo yo — sin intermediarios. Respuesta en menos de 24 horas.',
   },
   {
     title: 'Corrección de ejercicios por vídeo',

@@ -1,7 +1,7 @@
 const stats = [
   { value: '+600', label: 'Personas transformadas', sub: 'Resultados reales y verificables' },
   { value: '100%', label: 'Plan personalizado', sub: 'Sin plantillas ni atajos' },
-  { value: 'L–V', label: 'Contacto directo', sub: 'Por WhatsApp · 8h a 19h' },
+  { value: '24h', label: 'Respuesta rápida', sub: 'Te respondo en menos de 24h' },
   { value: '1:1', label: 'Asesoría individual', sub: 'Yo escribo, yo respondo' },
 ]
 

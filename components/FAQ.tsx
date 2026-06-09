@@ -13,7 +13,7 @@ const faqs = [
   },
   {
     q: '¿Cómo es la comunicación durante el proceso?',
-    a: 'Toda la comunicación se gestiona a través de WhatsApp, de lunes a viernes en horario de 8:00 a 19:00. Me escribes tú directamente y te respondo yo, sin chatbots ni intermediarios.',
+    a: 'Toda la comunicación se gestiona a través de WhatsApp. Me escribes tú directamente y te respondo yo, sin chatbots ni intermediarios. Respuesta en menos de 24 horas.',
   },
   {
     q: '¿Qué pasa si no veo resultados?',
