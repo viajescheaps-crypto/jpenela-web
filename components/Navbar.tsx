@@ -35,7 +35,7 @@ export default function Navbar() {
             className="h-9 w-auto object-contain"
           />
           <span className="hidden sm:inline text-white text-[13px] tracking-[0.15em] font-medium">
-            JUAN PENELA
+            JUAN PENELA 🔪
           </span>
         </a>
 
@@ -59,7 +59,7 @@ export default function Navbar() {
           rel="noopener noreferrer"
           className="hidden md:inline-flex items-center gap-2 bg-white text-black text-[12px] font-semibold tracking-wide px-5 py-2.5 hover:bg-white/90 transition-colors"
         >
-          CONTACTAR
+          ESCRÍBEME
         </a>
 
         {/* Hamburger mobile */}
@@ -93,7 +93,7 @@ export default function Navbar() {
             rel="noopener noreferrer"
             className="mt-2 inline-flex justify-center bg-white text-black text-[12px] font-semibold tracking-wide px-5 py-3"
           >
-            CONTACTAR POR WHATSAPP
+            ESCRÍBEME POR WHATSAPP
           </a>
         </div>
       )}

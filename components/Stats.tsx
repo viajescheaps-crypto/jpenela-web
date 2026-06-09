@@ -1,23 +1,26 @@
 const stats = [
-  { label: 'Planes 100% personalizados', sub: 'Sin plantillas genéricas' },
-  { label: 'Seguimiento continuo', sub: 'Vía WhatsApp L–V · 8h a 19h' },
-  { label: 'Corrección por vídeo', sub: 'Técnica revisada uno a uno' },
-  { label: 'Actualización del plan', sub: 'Según tu progreso real' },
+  { value: '+600', label: 'Personas transformadas', sub: 'Resultados reales y verificables' },
+  { value: '100%', label: 'Plan personalizado', sub: 'Sin plantillas ni atajos' },
+  { value: 'L–V', label: 'Contacto directo', sub: 'Por WhatsApp · 8h a 19h' },
+  { value: '1:1', label: 'Asesoría individual', sub: 'Yo escribo, yo respondo' },
 ]
 
 export default function Stats() {
   return (
     <section className="bg-[#0a0a0a] border-y border-white/5">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-4">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-2 md:grid-cols-4">
         {stats.map((s, i) => (
           <div
             key={i}
-            className="flex flex-col justify-center py-10 md:py-12 px-2 md:px-6 border-b md:border-b-0 md:border-r border-white/5 last:border-r-0 last:border-b-0"
+            className="flex flex-col justify-center py-10 md:py-14 px-2 md:px-6 border-b md:border-b-0 md:border-r border-white/5 last:border-r-0 sm:[&:nth-child(2)]:border-r-0 md:[&:nth-child(2)]:border-r"
           >
-            <p className="text-white font-medium text-[15px] leading-tight mb-1.5">
+            <p className="font-display text-4xl md:text-5xl text-white mb-3 tracking-tight">
+              {s.value}
+            </p>
+            <p className="text-white font-medium text-[14px] mb-1 leading-tight">
               {s.label}
             </p>
-            <p className="text-white/40 text-[12px] tracking-wide">
+            <p className="text-white/40 text-[12px] tracking-wide font-light">
               {s.sub}
             </p>
           </div>
