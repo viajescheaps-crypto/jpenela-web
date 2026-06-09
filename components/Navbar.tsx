@@ -34,15 +34,12 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
-        <a href="#hero" className="flex items-center gap-3">
+        <a href="#hero" className="flex items-center">
           <img
-            src="/images/logo.jpeg"
+            src="/images/logo-nombre.jpeg"
             alt="Juan Penela"
-            className="h-9 w-auto object-contain"
+            className="h-10 md:h-12 w-auto object-contain"
           />
-          <span className="hidden sm:inline text-white text-[13px] tracking-[0.15em] font-medium">
-            JUAN PENELA 🔪
-          </span>
         </a>
 
         {/* Desktop nav */}

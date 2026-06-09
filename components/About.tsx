@@ -45,13 +45,12 @@ export default function About() {
             <p>{t.about.p3}</p>
           </div>
 
-          <div className="mt-12 relative overflow-hidden border border-brand-accent/15 max-w-xl group">
+          <div className="mt-12 relative max-w-xl group">
             <img
-              src="/images/about-feature.jpg"
+              src="/images/elementos.jpeg"
               alt="Juan Penela"
-              className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+              className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0908]/40 via-transparent to-transparent pointer-events-none" />
           </div>
         </div>
       </div>
