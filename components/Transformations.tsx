@@ -1,10 +1,7 @@
-const photos = [
-  { src: '/images/t1.jpg', label: 'Recomposición corporal' },
-  { src: '/images/t2.jpg', label: 'Pérdida de grasa' },
-  { src: '/images/t3.jpg', label: 'Definición femenina' },
-  { src: '/images/t4.jpg', label: 'Ganancia muscular' },
-  { src: '/images/t5.jpg', label: 'Definición masculina' },
-]
+const photos = Array.from({ length: 17 }, (_, i) => ({
+  src: `/images/t${i + 1}.png`,
+  label: `Cambio ${String(i + 1).padStart(2, '0')}`,
+}))
 
 // Duplicamos la lista para que el bucle sea perfecto (sin saltos)
 const loop = [...photos, ...photos]

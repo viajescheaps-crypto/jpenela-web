@@ -6,13 +6,20 @@ export default function About() {
         <div className="md:col-span-5 relative">
           <div className="aspect-[4/5] overflow-hidden bg-[#111]">
             <img
-              src="/images/juan-hero.jpg"
+              src="/images/juan-hero.png"
               alt="Juan Penela"
               className="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-1000"
             />
           </div>
-          <div className="absolute -bottom-5 -right-5 bg-black p-4 border border-white/10">
-            <img src="/images/logo.png" alt="JP" className="w-14 h-14 object-contain" />
+          <div className="absolute -bottom-5 -right-5 bg-black p-3 border border-white/10 overflow-hidden">
+            <video
+              src="/video/logo-anim.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-16 h-16 object-cover"
+            />
           </div>
         </div>
 

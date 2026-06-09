@@ -30,7 +30,7 @@ export default function Navbar() {
         {/* Logo */}
         <a href="#hero" className="flex items-center gap-3">
           <img
-            src="/images/logo.png"
+            src="/images/logo.jpeg"
             alt="Juan Penela"
             className="h-9 w-auto object-contain"
           />

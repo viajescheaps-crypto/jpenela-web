@@ -4,7 +4,7 @@ export default function Hero() {
       {/* Foto de fondo con zoom */}
       <div className="absolute inset-0 hero-zoom">
         <img
-          src="/images/juan-hero.jpg"
+          src="/images/juan-hero.png"
           alt="Juan Penela"
           className="w-full h-full object-cover object-top"
         />
