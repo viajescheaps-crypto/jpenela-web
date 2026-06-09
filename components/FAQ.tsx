@@ -40,10 +40,10 @@ export default function FAQ() {
   const { t } = useTranslation()
 
   return (
-    <section id="faq" className="relative bg-[#0A0908] py-28 md:py-40 overflow-hidden">
+    <section id="faq" className="relative bg-[#0A0908] py-16 md:py-24 overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_40%_50%_at_50%_0%,_rgba(201,168,116,0.04)_0%,_transparent_70%)] pointer-events-none" />
       <div className="relative max-w-4xl mx-auto px-6 md:px-12">
-        <div className="mb-16">
+        <div className="mb-10">
           <p className="eyebrow mb-6">{t.faq.eyebrow}</p>
           <h2 className="font-display text-4xl md:text-6xl text-white">
             {t.faq.titleLine1}<br />

@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <>
       {/* CTA Final */}
-      <section className="relative bg-[#0a0807] py-28 md:py-40 border-t border-brand-accent/10 overflow-hidden">
+      <section className="relative bg-[#0a0807] py-16 md:py-24 border-t border-brand-accent/10 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_60%_at_50%_50%,_rgba(201,168,116,0.07)_0%,_transparent_70%)] pointer-events-none" />
         <div className="relative max-w-4xl mx-auto px-6 md:px-12 text-center">
           <p className="eyebrow mb-6">{t.cta.eyebrow}</p>

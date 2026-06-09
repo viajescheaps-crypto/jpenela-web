@@ -6,7 +6,7 @@ export default function About() {
   const { t } = useTranslation()
 
   return (
-    <section id="sobre-mi" className="relative bg-[#0A0908] py-28 md:py-40 overflow-hidden">
+    <section id="sobre-mi" className="relative bg-[#0A0908] py-16 md:py-24 overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_40%_60%_at_15%_50%,_rgba(201,168,116,0.06)_0%,_transparent_70%)] pointer-events-none" />
       <div className="relative max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-12 gap-12 md:gap-16 items-center">
         {/* Foto */}

@@ -17,8 +17,8 @@ export default function Transformations() {
     : 'Hi%20Juan%2C%20I%20want%20to%20start%20my%20transformation'
 
   return (
-    <section id="transformaciones" className="bg-[#0a0807] py-28 md:py-40 border-y border-brand-accent/10">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 mb-16">
+    <section id="transformaciones" className="bg-[#0a0807] py-16 md:py-24 border-y border-brand-accent/10">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 mb-10">
         <div className="grid md:grid-cols-12 gap-8">
           <div className="md:col-span-5">
             <p className="eyebrow mb-6">{t.transformations.eyebrow} 🔪</p>

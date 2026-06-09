@@ -9,10 +9,10 @@ export default function Plan() {
     : 'Hi%20Juan%2C%20I%20want%20to%20join%20your%201%3A1%20program'
 
   return (
-    <section id="plan" className="relative bg-[#0a0807] py-28 md:py-40 border-y border-brand-accent/10 overflow-hidden">
+    <section id="plan" className="relative bg-[#0a0807] py-16 md:py-24 border-y border-brand-accent/10 overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_70%_at_80%_20%,_rgba(201,168,116,0.05)_0%,_transparent_70%)] pointer-events-none" />
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
-        <div className="grid md:grid-cols-12 gap-8 mb-20">
+        <div className="grid md:grid-cols-12 gap-8 mb-12">
           <div className="md:col-span-5">
             <p className="eyebrow mb-6">{t.plan.eyebrow}</p>
             <h2 className="font-display text-4xl md:text-6xl text-white">

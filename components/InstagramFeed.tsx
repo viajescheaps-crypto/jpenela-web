@@ -15,10 +15,10 @@ export default function InstagramFeed() {
   const { t, lang } = useTranslation()
 
   return (
-    <section className="relative bg-[#0a0807] py-28 md:py-40 border-y border-brand-accent/10 overflow-hidden">
+    <section className="relative bg-[#0a0807] py-16 md:py-24 border-y border-brand-accent/10 overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_30%_50%_at_85%_50%,_rgba(201,168,116,0.05)_0%,_transparent_70%)] pointer-events-none" />
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
-        <div className="grid md:grid-cols-12 gap-8 mb-16">
+        <div className="grid md:grid-cols-12 gap-8 mb-10">
           <div className="md:col-span-7">
             <p className="eyebrow mb-6">{t.instagram.eyebrow} 🔪</p>
             <h2 className="font-display text-4xl md:text-6xl text-white">

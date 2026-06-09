@@ -6,11 +6,11 @@ export default function Philosophy() {
   const { t } = useTranslation()
 
   return (
-    <section className="bg-[#0A0908] py-28 md:py-40 relative overflow-hidden">
+    <section className="bg-[#0A0908] py-16 md:py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_70%_at_50%_50%,_rgba(201,168,116,0.06)_0%,_transparent_70%)]" />
 
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
-        <div className="grid md:grid-cols-12 gap-8 mb-20">
+        <div className="grid md:grid-cols-12 gap-8 mb-12">
           <div className="md:col-span-5">
             <p className="eyebrow mb-6">{t.philosophy.eyebrow} 🔪</p>
             <h2 className="font-display text-4xl md:text-6xl text-white">
