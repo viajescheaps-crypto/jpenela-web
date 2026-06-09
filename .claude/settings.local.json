@@ -24,7 +24,8 @@
       "Bash(curl -sI https://jpenela-web.vercel.app/images/t1.png)",
       "Bash(curl -sI https://jpenela-web.vercel.app/video/logo-anim.mp4)",
       "Bash(git commit *)",
-      "Bash(python -c \"from PIL import Image; img = Image.open\\('d:/JPENELA/public/images/logo-nombre.png'\\); print\\('Mode:', img.mode\\); pixels = img.load\\(\\); print\\('Corner alpha \\(0,0\\):', pixels[0,0]\\); print\\('Corner alpha \\(100,100\\):', pixels[100,100]\\); print\\('Center alpha:', pixels[img.size[0]//2, img.size[1]//2]\\)\")"
+      "Bash(python -c \"from PIL import Image; img = Image.open\\('d:/JPENELA/public/images/logo-nombre.png'\\); print\\('Mode:', img.mode\\); pixels = img.load\\(\\); print\\('Corner alpha \\(0,0\\):', pixels[0,0]\\); print\\('Corner alpha \\(100,100\\):', pixels[100,100]\\); print\\('Center alpha:', pixels[img.size[0]//2, img.size[1]//2]\\)\")",
+      "Bash(git checkout *)"
     ]
   }
 }

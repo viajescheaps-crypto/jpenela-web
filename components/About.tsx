@@ -47,7 +47,7 @@ export default function About() {
 
           <div className="mt-12 relative max-w-xl group">
             <img
-              src="/images/elementos.png"
+              src="/images/elementos.jpeg"
               alt="Juan Penela"
               className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105"
             />
