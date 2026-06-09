@@ -44,7 +44,7 @@ export default function Transformations() {
               <img
                 src={p.src}
                 alt={p.label}
-                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 loading={i < photos.length ? 'eager' : 'lazy'}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

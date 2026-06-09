@@ -19,7 +19,11 @@
       "Bash(git add *)",
       "Bash(git config *)",
       "Bash(git commit -m ' *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(curl -sI https://jpenela-web.vercel.app/)",
+      "Bash(curl -sI https://jpenela-web.vercel.app/images/t1.png)",
+      "Bash(curl -sI https://jpenela-web.vercel.app/video/logo-anim.mp4)",
+      "Bash(git commit *)"
     ]
   }
 }
