@@ -25,7 +25,25 @@
       "Bash(curl -sI https://jpenela-web.vercel.app/video/logo-anim.mp4)",
       "Bash(git commit *)",
       "Bash(python -c \"from PIL import Image; img = Image.open\\('d:/JPENELA/public/images/logo-nombre.png'\\); print\\('Mode:', img.mode\\); pixels = img.load\\(\\); print\\('Corner alpha \\(0,0\\):', pixels[0,0]\\); print\\('Corner alpha \\(100,100\\):', pixels[100,100]\\); print\\('Center alpha:', pixels[img.size[0]//2, img.size[1]//2]\\)\")",
-      "Bash(git checkout *)"
+      "Bash(git checkout *)",
+      "Skill(update-config)",
+      "Skill(update-config:*)",
+      "PowerShell($j = Get-Content \"d:\\\\JPENELA\\\\.claude\\\\settings.local.json\" -Raw | ConvertFrom-Json; $j.hooks.Stop[0].hooks[0].command)"
+    ]
+  },
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$s = git status --porcelain 2>$null; if ($s) { git add -A; git commit -m \"Auto-deploy $(Get-Date -Format 'yyyy-MM-dd HH:mm')\"; git push origin main }",
+            "shell": "powershell",
+            "timeout": 60,
+            "statusMessage": "Desplegando a Vercel..."
+          }
+        ]
+      }
     ]
   }
 }
