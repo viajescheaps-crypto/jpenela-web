@@ -36,7 +36,7 @@ export default function Navbar() {
         {/* Logo */}
         <a href="#hero" className="flex items-center">
           <img
-            src="/images/logo-nombre.png"
+            src="/images/logo1.png"
             alt="Juan Penela"
             className="h-14 md:h-20 w-auto object-contain"
           />
@@ -62,9 +62,9 @@ export default function Navbar() {
             href={`https://wa.me/34601172353?text=${ctaMessage}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-white text-black text-[12px] font-semibold tracking-wide px-5 py-2.5 hover:bg-brand-accent transition-colors"
+            className="inline-flex items-center"
           >
-            {t.nav.cta}
+            <img src="/images/logo2.png" alt="Escríbeme" className="h-10 w-auto object-contain" />
           </a>
         </div>
 
@@ -100,9 +100,9 @@ export default function Navbar() {
             href={`https://wa.me/34601172353?text=${ctaMessage}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-2 inline-flex justify-center bg-white text-black text-[12px] font-semibold tracking-wide px-5 py-3 hover:bg-brand-accent transition-colors"
+            className="mt-2 inline-flex justify-center"
           >
-            {t.nav.ctaMobile}
+            <img src="/images/logo2.png" alt="Escríbeme" className="h-10 w-auto object-contain" />
           </a>
         </div>
       )}

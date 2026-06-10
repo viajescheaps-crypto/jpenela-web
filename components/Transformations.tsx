@@ -11,10 +11,7 @@ const photos = Array.from({ length: 17 }, (_, i) => ({
 const loop = [...photos, ...photos]
 
 export default function Transformations() {
-  const { t, lang } = useTranslation()
-  const waMsg = lang === 'es'
-    ? 'Hola%20Juan%2C%20quiero%20empezar%20mi%20transformaci%C3%B3n'
-    : 'Hi%20Juan%2C%20I%20want%20to%20start%20my%20transformation'
+  const { t } = useTranslation()
 
   return (
     <section id="transformaciones" className="bg-[#0a0807] py-16 md:py-24 border-y border-brand-accent/10">
@@ -67,17 +64,6 @@ export default function Transformations() {
         <p className="text-white/50 text-[13px] tracking-wide font-light text-center md:text-left">
           {t.transformations.ctaText}
         </p>
-        <a
-          href={`https://wa.me/34601172353?text=${waMsg}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-white text-[13px] tracking-wide font-medium border-b border-brand-accent/40 hover:border-brand-accent hover:text-brand-accent pb-1 transition-colors"
-        >
-          {t.transformations.cta}
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-            <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square" />
-          </svg>
-        </a>
       </div>
     </section>
   )

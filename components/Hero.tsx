@@ -3,16 +3,13 @@
 import { useTranslation } from '@/lib/LanguageProvider'
 
 export default function Hero() {
-  const { t, lang } = useTranslation()
-  const waMsg = lang === 'es'
-    ? 'Hola%20Juan%2C%20quiero%20entrar%20en%20el%20programa%201%3A1'
-    : 'Hi%20Juan%2C%20I%20want%20to%20join%20your%201%3A1%20program'
+  const { t } = useTranslation()
 
   return (
     <section id="hero" className="relative h-screen min-h-[640px] flex items-center overflow-hidden">
       <div className="absolute inset-0 hero-zoom">
         <img
-          src="/images/juan-hero.png"
+          src="/images/juan3.JPEG"
           alt="Juan Penela"
           className="w-full h-full object-cover object-top"
         />
@@ -43,14 +40,6 @@ export default function Hero() {
           </div>
 
           <div className="fade-up-delay-3 flex flex-col sm:flex-row gap-3">
-            <a
-              href={`https://wa.me/34601172353?text=${waMsg}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="relative overflow-hidden inline-flex items-center justify-center gap-2 bg-white text-black font-semibold text-[13px] tracking-wide px-7 py-4 hover:bg-brand-accent transition-all duration-300 group"
-            >
-              <span className="relative z-10">{t.hero.cta}</span>
-            </a>
             <a
               href="#sobre-mi"
               className="inline-flex items-center justify-center gap-2 border border-white/30 text-white font-medium text-[13px] tracking-wide px-7 py-4 hover:border-brand-accent hover:text-brand-accent hover:bg-brand-accent/5 transition-all duration-300"

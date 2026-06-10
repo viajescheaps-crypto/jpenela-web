@@ -10,6 +10,7 @@ import InstagramFeed from '@/components/InstagramFeed'
 import LifeProBanner from '@/components/LifeProBanner'
 import FAQ from '@/components/FAQ'
 import Footer from '@/components/Footer'
+import WhatsAppFloat from '@/components/WhatsAppFloat'
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
       <LifeProBanner />
       <FAQ />
       <Footer />
+      <WhatsAppFloat />
     </main>
   )
 }
